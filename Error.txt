@@ -1,0 +1,6 @@
+MongoNetworkError: errorLabels: [ 'TransientTransactionError' ].
+--1.Go to your mongoDB Atlas Dashboard
+--2.Open Network Access (its there in side navbar)
+--3.Click on ADD IP ADDRESS
+--4.Click on allow from Any IP Address ( it basically give access to your dynamic IP address)
+--5.Run again project.
