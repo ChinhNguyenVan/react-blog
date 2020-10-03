@@ -75,3 +75,8 @@ Install axios:
 Install react-router-dom:
 1. cd my directory
 2. npm install react-router-dom --save
+
+Install Redux, Redux-promise, redux-thunk:
+--- npm install redux redux-promise redux-thunk --save
+Install css:
+---npm install materialize-css@next --save
