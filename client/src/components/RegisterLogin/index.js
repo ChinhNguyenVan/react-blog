@@ -34,6 +34,10 @@ class RegisterLogin extends Component {
           });
         }
       });
+    } else {
+      this.setState({
+        errors: this.state.errors.concat("Form is not valid"),
+      });
     }
   };
 
