@@ -5,3 +5,5 @@ Install cookie-parser: npm install cookie-parser@1.4.3 --save
 Install nodemon: npm install nodemon --save-dev
 Install bcrypt: npm install bcrypt --save
 Install jsonwebtoken: npm install jsonwebtoken --save
+Install proxy: npm install http-proxy-middleware --save
+install concurrently :npm install concurrently --save
