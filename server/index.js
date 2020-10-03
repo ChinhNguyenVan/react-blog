@@ -18,6 +18,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
+app.get("/", (req,res)=>{
+  res.json({"Hello": "i am happy to deloy our applycation"})
+})
+
+
+
+
 app.get("/api/user/auth", auth, (req, res) => {
   res.status(200).json({
     _id: req._id,
