@@ -25,7 +25,7 @@ app.get("/api/user/auth", auth, (req, res) => {
     email: req.user.email,
     name: req.user.name,
     lastname: req.user.lastname,
-    role: req.user.role
+    role: req.user.role,
   });
 });
 
@@ -63,4 +63,19 @@ app.post("/api/user/login", (req, res) => {
   });
 });
 
-app.listen(5000);
+app.get("/api/user/logout",auth, (req, res) => {
+  User.findOneAndUpdate({ _id: req.user._id }, { token: "" }, (err, doc) => {
+    if (err)
+      return res.json({
+        success: false,
+        err
+      });
+    return res.status(200).send({
+      success: true,
+    });
+  });
+});
+const port = process.env.PORT || 5000
+app.listen(port,()=>{
+  console.log(`Server Running at ${port}`)
+});
